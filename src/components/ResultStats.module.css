@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,700&display=swap');
+
+.text{
+    color: white;
+    font-style: oblique;
+}
+
+.grid{
+    display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 10px 10px; 
+  grid-template-areas: 
+    "header header header header header header header header"
+    ". yourStats yourStats globalStats globalStats theirStats theirStats ."
+    ". yourStats yourStats globalStats globalStats theirStats theirStats ."
+    ". yourStats yourStats globalStats globalStats theirStats theirStats ."
+    ". yourStats yourStats actions actions theirStats theirStats ."
+    ". yourStats yourStats actions actions theirStats theirStats ."
+    ". yourStats yourStats actions actions theirStats theirStats ."; 
+}
+
+/* display: grid;
+    border: 2px solid white;
+    padding-bottom: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+    "header header header header header header header header"
+    ". yourStats yourStats globalStats globalStats theirStats theirStats ."
+    ". yourStats yourStats globalStats globalStats theirStats theirStats ."
+    ". yourStats yourStats actions actions theirStats theirStats ."
+    ". yourStats yourStats actions actions theirStats theirStats .";  
+    */
+.header { 
+    grid-area: header; 
+    min-height: 0px;
+}
+.extra{
+    display:none
+}
+.img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.yourStats { 
+    grid-area: yourStats;
+    border: 4px solid #21ba45;
+    background-color: rgba(50, 54, 48, 0.589);
+    border-radius: 10px;
+    padding: 1vw;
+}
+.globalStats {
+    grid-area: globalStats;
+    border: 4px solid #21ba45;
+    background-color: rgba(50, 54, 48, 0.589);
+    border-radius: 10px; 
+    padding: 1vw;
+}
+.theirStats { 
+    grid-area: theirStats;
+    border: 4px solid #21ba45;
+    background-color: rgba(50, 54, 48, 0.589);
+    border-radius: 10px; 
+    padding: 1vw;
+}
+.actions { 
+    grid-area: actions; 
+    border: 4px solid #21ba45;
+    background-color: rgba(50, 54, 48, 0.589);
+    border-radius: 10px;
+}
+
+
+.statRow{
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+   
+}
+
+.statHeader{
+    grid-area: 'extra';
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: .25vw;
+}
+.statHeader > p{
+    color: rgb(21, 221, 188); 
+}
+
+.statRow > div{
+    white-space: nowrap;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.yourStats > *{
+    white-space: nowrap;
+    color: white;
+    font-family: 'Arimo';
+}
+.globalStats > *{
+    white-space: nowrap;
+    color: white;
+    font-family: 'Arimo';
+}
+.extraStats > *{
+    white-space: nowrap;
+    color: white;
+    font-family: 'Arimo';
+}
+.theirStats > * {
+    white-space: nowrap;
+    color: white;
+    font-family: 'Arimo';
+}
+.extraStats *{
+    display:none;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .grid{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        gap: 10px 10px; 
+        padding-left: 4px;
+        padding-right: 4px;
+        grid-template-areas: 
+          "header header header header header header header header"
+          "extra extra yourStats yourStats globalStats globalStats theirStats theirStats "
+          "extra extra yourStats yourStats globalStats globalStats theirStats theirStats "
+          "extra extra yourStats yourStats globalStats globalStats theirStats theirStats "
+          "extra extra yourStats yourStats actions actions theirStats theirStats "
+          "extra extra yourStats yourStats actions actions theirStats theirStats "
+          "extra extra yourStats yourStats actions actions theirStats theirStats "; 
+    }
+    .statHeader{
+        border:none;
+    }
+    .statHeader *{
+        display: none
+    }
+   
+    .extraStats{
+        grid-area: extra;
+    border: 4px solid #21ba45;
+    background-color: rgba(50, 54, 48, 0.589);
+    border-radius: 10px; 
+    padding: 1vw;
+    }
+    .extraStats *{
+        display: block
+    }
+    .extra{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: .25vw;
+    }
+    .extra > p{
+        color: rgb(21, 221, 188); 
+    }
+}
