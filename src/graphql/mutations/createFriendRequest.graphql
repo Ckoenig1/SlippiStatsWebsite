@@ -1,0 +1,14 @@
+mutation createFriendRequest($username: String!){
+  createFriendRequest(username: $username){
+    errors{
+        field
+        message
+    }
+    friendRequest{
+      id
+      requester
+      requestee
+      status
+	}
+}
+}

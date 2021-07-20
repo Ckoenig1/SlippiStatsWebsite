@@ -4,6 +4,7 @@ import { statTracker } from "../utils/statTracker";
 import { ResultsStats } from "./ResultsStats";
 import { TotalStats } from "./TotalStats";
 import styles from "./ResultStats.module.css"
+import { FriendsList } from "./FriendsList";
 
 interface StatWindowProps {
     tab: number,
@@ -23,16 +24,14 @@ export const StatWindow: React.FC<StatWindowProps> = ({tab,visible,stats}) => {
                 contents = (<Text color="white" fontSize="3xl"> Coming Soon! </Text>)
                 break;
             case 2:
-                contents = (<Text color="white" fontSize="3xl"> Coming Soon! </Text>)
+                contents = (<FriendsList/>)
                 break;
 
         }
         
         return (
             <Box border="2px solid purple" height="100%" width="100%" position="fixed">
-                <Box className={styles.grid} borderRadius="10px" border="8px solid purple" background="blackAlpha.900" margin="auto" width="90%" height="90%" position="absolute" top="50%" left="50%" transform="translate(-50%,-52%)"  >
-                    {contents}
-                </Box>
+                {contents}
             </Box>
         )
     }

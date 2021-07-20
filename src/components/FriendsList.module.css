@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . . . . . ."
+      ". friends friends friends friends Invitations Invitations Invitations Invitations ."
+      ". friends friends friends friends Invitations Invitations Invitations Invitations ."
+      ". friends friends friends friends Invitations Invitations Invitations Invitations ."
+      ". friends friends friends friends recentPlayers recentPlayers recentPlayers recentPlayers ."
+      ". friends friends friends friends recentPlayers recentPlayers recentPlayers recentPlayers ."
+      ". friends friends friends friends recentPlayers recentPlayers recentPlayers recentPlayers ."
+      ". . . . . . . . . .";
+  }
+  
+  .Invitations { 
+      grid-area: Invitations;
+      border: 4px solid #21ba45;
+      background-color: rgba(50, 54, 48, 0.589);
+      border-radius: 10px;
+      padding: 1vw;
+      overflow: hidden;
+      overflow-y: scroll;
+     }
+  
+  .recentPlayers { 
+      grid-area: recentPlayers;
+      border: 4px solid #21ba45;
+      background-color: rgba(50, 54, 48, 0.589);
+      border-radius: 10px;
+      padding: 1vw;
+      overflow: hidden;
+      overflow-y: scroll;
+     }
+  
+  .friends {
+       grid-area: friends;
+       border: 4px solid #21ba45;
+       background-color: rgba(50, 54, 48, 0.589);
+       border-radius: 10px;
+       padding: 1vw;
+       overflow: hidden;
+       overflow-y: scroll;
+ }
+  

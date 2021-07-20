@@ -1,0 +1,13 @@
+mutation respondToFriendRequest($response: Boolean!,$requestId: Float!){
+  respondToFriendRequest(response: $response, requestId: $requestId){
+    errors{
+      field
+      message
+    }
+    friendRequest{
+      requester
+      requestee
+      status
+    }
+	}
+}

@@ -1,0 +1,15 @@
+mutation respondToInvitation($requestId: Float!, $response:Boolean!){
+  respondToInvitation(requestId: $requestId,response: $response){
+    errors{
+      field
+      message
+    }
+    invitation{
+      id
+      requester
+      requestee
+      createdAt
+      status
+    }
+  }
+}

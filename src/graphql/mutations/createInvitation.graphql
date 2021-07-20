@@ -1,0 +1,15 @@
+mutation createInvitation($username: String!){
+  createInvitation(username: $username){
+    errors{
+      field
+      message
+    }
+    invitation{
+      id
+      createdAt
+      status
+      requester
+      requestee
+    }
+  }
+}

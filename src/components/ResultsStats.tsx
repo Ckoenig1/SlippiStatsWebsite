@@ -642,38 +642,18 @@ export const ResultsStats: React.FC<TotalStatsProps> = ({stats,recent,visible}) 
     )
 
     return (
-        <>
-        {winnerPlaque}
-        {yourStats}
-        {globalStats}
-        {extras}
-        {theirStats}
-        
-        <Flex  className={styles.actions}>
-        s
-        </Flex>
-        
-        </>
+        <Box className={styles.grid} borderRadius="10px" border="8px solid purple" background="blackAlpha.900" margin="auto" width="90%" height="90%" position="absolute" top="50%" left="50%" transform="translate(-50%,-52%)"  >
+            {winnerPlaque}
+            {yourStats}
+            {globalStats}
+            {extras}
+            {theirStats}
+            <Flex  className={styles.actions}>
+            s
+            </Flex>
+        </Box>
     );
     
        
 }
 
-// wins: number;
-//   losses: number;
-//   totalGames: number;
-//   incompleteGames: number;
-//   timePlayed: number;
-//   kills: number;
-//   deaths: number;
-//   selfDestructs: number;
-//   killDeath: number;
-//   averageSDs: number;
-//   apm: number;
-//   openingsPerKill: number;
-//   avgKillPercent: number;
-//   comeBack2: number;
-//   comeBack3: number;
-//   comeBack4: number;
-//   fourStocks: number;
-// }

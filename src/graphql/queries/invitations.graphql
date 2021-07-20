@@ -1,0 +1,8 @@
+query invitations{
+  invitations{
+    requester
+    requestee
+    createdAt
+    status
+  }
+}

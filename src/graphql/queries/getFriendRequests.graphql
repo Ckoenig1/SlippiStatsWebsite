@@ -1,0 +1,9 @@
+
+  query getFriendRequests{ 
+    getFriendRequests{
+        id
+        requester
+        requestee
+        status 
+    }
+  }
